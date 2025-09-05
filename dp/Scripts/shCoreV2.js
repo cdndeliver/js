@@ -36,7 +36,7 @@ var dp = {
 
 function copyToClip(str) {
   function listener(e) {
-    //e.clipboardData.setData("text/html", str);
+    e.clipboardData.setData("text/html", str);
     e.clipboardData.setData("text/plain", str);
     e.preventDefault();
   }
@@ -668,4 +668,5 @@ dp.sh.HighlightAll = function(name, showGutter /* optional */, showControls /* o
 		element.parentNode.insertBefore(highlighter.div, element);
 	}	
 }
+
 
