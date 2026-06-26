@@ -1,7 +1,4 @@
 window.addEventListener('load', function(){
-  setTimeout(function(){
-    (function(){
-
 (function(){
   var existing = document.getElementById('customLightbox');
   if(existing) existing.remove();
@@ -113,11 +110,4 @@ window.addEventListener('load', function(){
 
   window.addEventListener('resize', updateFilmstrip);
 })();
-
-
-
-
-
-    })();
-  }, 3000);
 });
