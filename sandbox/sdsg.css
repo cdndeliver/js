@@ -1,0 +1,69 @@
+body {
+	max-width: 100%;
+}
+hr {
+	border: none;
+}
+hr:before {
+	display: block;
+	padding-top: 1em;
+	content: "";
+}
+@media only screen {
+	aside,
+	main > section > div,
+	main > div,
+	section > article {
+		float: left;
+		width: 100%;
+		box-sizing: border-box;
+	}
+}
+@media only screen and (min-width: 34em) {
+	body { padding: 0; }
+	section > article { width: 50%; padding: 0 0.75em; }
+	article:first-child { border-right: 1px dotted #aaa; padding-left: 0; }
+	main > section > div > section > article { padding-right: 0.75em; }
+	main > section > div > section > article:first-child { padding-left: 0; }
+	main > section > div > section:after { content: ""; clear: both; display: table; }
+}
+@media only screen and (min-width: 76em) {
+	main > section > div,
+	main > div { width: 68.33%; }
+	aside { width: 31.66%; }
+	aside > section > article { width: 100%; padding: 0; }
+	aside > section > article:first-child { border: none; }
+}
+main > section > div,
+main > div,
+header > div, footer > div {
+	box-sizing: border-box;
+	padding-right: 1.5em;
+}
+main > section:after,
+main > div:after,
+header > div:after,
+footer > div:after {
+	content: "";
+	clear: both;
+	display: table;
+}
+footer > div { padding-top: 1.5em; }
+/* Wide Mode */
+/* needs to override Center mode, not Hybrid */
+main, header, footer { max-width: 100%; }
+/* Center Mode - can use pixel like 1130px */
+/* Hybrid Mode - just add > div to header and footer below */
+main, header, footer { margin: 0 auto; max-width: 70.625em; }
+
+/* Cosmetics */
+
+body {
+	font-family: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+}
+header {
+	border-bottom: 1px solid #bbb;
+}
+hr {
+	border-bottom: 1px dotted #bbb;
+}
